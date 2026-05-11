@@ -1,59 +1,17 @@
 # Labb4
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
+Länk till webbplatsen: https://kiim94.github.io/labb4-typescript/courses
 
-## Development server
+## Om uppgiften
+Denna uppgift har gått ut på att skapa en Angular-applikation som hämtar data från en webbtjänst/JSON-fil och visar den på skärmen i en tabell. Det ska gå att, genom att klicka på kolumn rubrikerna, sortera A-Ö samt Ö-A. Det ska gå att skriva i en sökruta för att filtera igenom kurserna.
 
-To start a local development server, run:
+En service ska användas för att hantera kommunikationen för att hämta data från JSON-filen med hjälp av HttpClient.
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Signals
 
-## Code scaffolding
+Det var spännande att använda denna, svår i början. Efter ett tag var det inte alltför problematiskt: utseendemässigt inte helt annorlunda från grundläggande TypeScript (t.ex. code: string = "" blir code = signal<string>("")). Största skillnaden med signals är att UI och värden som använder signalen uppdateras automatiskt när värdet ändras.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Service
+Denna ställde till det för min del. Lyckades till slut hitta några bra guider som visade hur det gick till och vad som skulle vara med. I efterhand verkar det praktiskt att skilja denna från komponenten som använder APIt: det gör det lättare att överblicka och återanvända, men jag undrar hur det blir när webbapplikationen är större.
